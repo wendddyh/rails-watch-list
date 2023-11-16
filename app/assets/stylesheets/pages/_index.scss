@@ -1,2 +1,39 @@
 // Import page-specific CSS files here.
 @import "home";
+$white: #ffff;
+
+#list_image{
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+}
+
+.card {
+  margin:20px;
+  justify-content: center;
+  align-items: center;
+
+  h1{
+  color: $white;
+  font-size: 50px;
+  font-weight: 700;
+  }
+}
+
+
+.banner{
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.container h1{
+  color: $white;
+  font-size: 70px;
+  font-weight: 700;
+}
+
+img{
+  width: 25rem;
+  height: auto;
+}

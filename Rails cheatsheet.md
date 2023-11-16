@@ -146,7 +146,7 @@ review.errors.full_messages
 belongs_to :customer, dependent: :destroy
 
 # Relation with cascade delete
-has_many :invoices 
+has_many :invoices
 
 #One to one
 has_one :profile
@@ -255,3 +255,6 @@ Article.column_names # ['id', 'name', 'price']
 Category.delete_all # delete all rows in Category table
 product.category = Category.all.sample # random for Faker data
 @products = Product.offset(5).limit(10).all # skip 5, take 10
+
+
+

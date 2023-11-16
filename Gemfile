@@ -42,6 +42,10 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+# sweet alert
+gem 'sweetalert2'
+
+
 # Typical gem
 gem "bootstrap", "~> 5.2"
 gem "autoprefixer-rails"

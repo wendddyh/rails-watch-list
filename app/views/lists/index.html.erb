@@ -1,0 +1,18 @@
+<%= render "navbar" %>
+
+<div class="banner">
+  <div class="container">
+    <h1>Movie Category List</h1>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <%=link_to "Create new list", new_list_path, class: "btn btn-flat" %>
+  <div class="row">
+    <% @lists.each do |list| %>
+    <div class="card" id="list_image" style="width: 25rem; height: 25rem; background-image:url(https://picsum.photos/640/360)">
+      <h1><%= link_to list.name, list_path(list.id) %></h1>
+    </div>
+    <% end %>
+  </div>
+</div>
