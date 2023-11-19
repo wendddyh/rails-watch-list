@@ -7,14 +7,13 @@ class BookmarksController < ApplicationController
     @list = List.find(params[:list_id])
   end
 
-
-
   def create
     @bookmark = Bookmark.new(bookmark_params)
-    @bookmark.list = @list
+    # @bookmark.list = @list
       if @bookmark.save
-        redirect_to bookmarks_path(@bookmark), notice: 'comment created successfully!'
+        redirect_to bookmarks_path, notice: 'comment created successfully!'
       else
+        raise
         render :new
       end
   end
@@ -36,6 +35,6 @@ class BookmarksController < ApplicationController
 
     # Only allow a bookmark of trusted parameters through.
     def bookmark_params
-      params.require(:bookmark).permit(:comment)
+      params.require(:bookmark).permit(:comment, :movie)
     end
 end

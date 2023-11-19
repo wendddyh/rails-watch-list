@@ -1,9 +1,11 @@
 <div class="container">
   <h3> Create new category list </h3>
   <%= simple_form_for @list do |f| %>
-    <%= f.input :name, label: 'Your personal movie category name'%>
+    <%= f.input :name, placeholder: 'Your personal movie category name'%>
+    <%= f.input :photo, as: :file  %>
     <%= f.button :submit, class: 'btn btn-primary my-4' %>
   <% end %>
 
-  <%= link_to "Back to movie list", lists_path %>
+  <%= link_to "Back to category list", lists_path %>
 </div>
+

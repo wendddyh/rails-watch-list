@@ -1,9 +1,17 @@
 .btn{
-  border-radius: 5px;
-  background-color: blueviolet;
-  color:white;
+  border-radius: 1px;
+  background-color: #336970;
+  color: white;
 
-  inner-text{
-    color:white;
+}
+
+.btn inner-text{
+  font-size: 18px;
+
+  &:hover{
+    border-radius: 1px;
+    background-color: #40585c;
+    color: white;
+    font-size: 18px;
   }
 }

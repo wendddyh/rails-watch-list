@@ -1,0 +1,21 @@
+<%= render "navbar" %>
+
+<div class="banner">
+  <div class="container">
+    <h1>Track films you’ve watched.</h1>
+    <h1>Save those you want to see.</h1>
+    <h1>Tell your friends what’s good.</h1>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+    <% @movies.each do|movie| %>
+      <div class="card" style="background-image: url(<%=movie.poster_url%>)">
+        <div class="inner-tag">
+          <p> <%= movie.rating %><i class="fa-solid fa-star" style="color: #ffd86b;"></i></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

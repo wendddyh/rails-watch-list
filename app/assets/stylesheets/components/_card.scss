@@ -1,4 +1,33 @@
+#list_image{
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @list.photo.key%>')
+
+
+}
+
+a{
+  text-decoration: none;
+  font-size: 45px;
+  font-family: 'Work Sans';
+  font-weight: 500;
+  color: whitesmoke;
+}
+
+.card_function{
+  display: flex;
+}
+
+
+// homepage
+
+.row{
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  justify-content: center;
+}
 
 .card{
-  
+  background-size: cover;
+  background-position: center;
+  width: 20rem;
+  height: 30rem;
 }

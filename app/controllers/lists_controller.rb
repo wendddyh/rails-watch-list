@@ -1,17 +1,21 @@
 class ListsController < ApplicationController
-  before_action :set_list, only: [ :show, :destroy]
+  before_action :set_list, only: [ :show, :destroy, :edit]
+
+  def home
+    @movies = Movie.all
+  end
 
   def index
     @lists = List.all
-    # raise
+    # @bookmark = Bookmark.find(list_id: params[:id])
+
   end
 
   def show
     @bookmark = Bookmark.where(list_id: params[:id])
     @review = Review.new(list_id: @list)
     # @bookmark = Movie.find(params[:id])
-    # raise
-
+    raise
   end
 
   def new
@@ -19,6 +23,7 @@ class ListsController < ApplicationController
   end
 
   def edit
+
   end
 
   def create
@@ -51,6 +56,6 @@ class ListsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def list_params
-      params.require(:list).permit(:name)
+      params.require(:list).permit(:name, :photo)
     end
   end
